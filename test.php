@@ -1,5 +1,5 @@
 <?php
-require_once '/vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 // Create the Transport
 $transport = (new Swift_SmtpTransport('in-v3.mailjet.com', 587))
@@ -21,17 +21,7 @@ $message = (new Swift_Message('Wonderful Subject'))
 $result = $mailer->send($message);
 ?>
 
-<div class="container-fluid " style="height:100%; background-color: #eaf4f2; padding:30px;"> 
 
-<div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-3"></div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-        <h1 class="text-center" style="color:#58ba52;"><strong>Reset Password</strong></h1><br>
-       
-        <p class="text-center" style="color:red;"> <?php echo $formerror?></p>
-        
-        <p class="text-center" style="color:#727272">Please enter your email</p>
   
           <form name="myForm" method="post" class="text-center">
               <div class="form-group">
@@ -43,9 +33,3 @@ $result = $mailer->send($message);
               color:white; border: 2px solid white;border-radius: 25px;">Reset Password</button>
 
           </form>
-        
-      </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-3"></div>
-</div>
-</div>
