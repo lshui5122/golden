@@ -20,16 +20,3 @@ $message = (new Swift_Message('Wonderful Subject'))
 // Send the message
 $result = $mailer->send($message);
 ?>
-
-
-  
-          <form name="myForm" method="post" class="text-center">
-              <div class="form-group">
-          <input type="email" name="email" placeholder="Email" value="<?=$email?>" pattern=".{1,}" required title="Cannot be empty field" size="30"><?php echo $error_name?>
-              </div>
-      <br>
-  
-  <button type="submit" name="submitted" value="Submit" class="btn btn-primary" style="height:50px; width:80%;background-color: #2f8f83;
-              color:white; border: 2px solid white;border-radius: 25px;">Reset Password</button>
-
-          </form>
